@@ -1,6 +1,6 @@
 package org.texttemplate;
 
-import in.setia.util.EmtizeXMLHelper;
+import org.texttemplate.util.XMLHelper;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -76,7 +76,7 @@ public class TTEngine {
 		
 		ResourceBundle rb = ResourceBundle.getBundle("resources.folder");
 		String smartTagFile = rb.getString("email.smarttag.xml");
-		EmtizeXMLHelper xmlHelper = new EmtizeXMLHelper();
+		XMLHelper xmlHelper = new XMLHelper();
 		xmlHelper.load(new FileInputStream(new File(smartTagFile)));
 		Node[] smartTags1 = xmlHelper.getElements();
 		Node rootTag = smartTags1[0];
