@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+	flatDir {
+		dirs 'lib'
+	}
+}
+
+dependencies {
+	compile ('apache:xalan')
+	compile ('apache:xerces')
+}
+
+task listJars << {
+	println "All runtime jars being listed..."
+	configurations.runtime.each { File file -> println file.name }
+}

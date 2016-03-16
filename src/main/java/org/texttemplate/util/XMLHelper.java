@@ -35,12 +35,12 @@ public class XMLHelper {
 	Document document;
 	static boolean debugFlag = false;
 
-	public EmtizeXMLHelper() {
+	public XMLHelper() {
 		debugFlag = false;
 		initialize();
 	}
 
-	public EmtizeXMLHelper(boolean yesNo) {
+	public XMLHelper(boolean yesNo) {
 		debugFlag = yesNo;
 		initialize();
 	}
